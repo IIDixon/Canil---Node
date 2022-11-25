@@ -20,13 +20,13 @@ server.engine('mustache', mustache());
 
 // Deixa o arquivo/pasta (public) acessível via URL
 // a partir de determinada rota (no caso '/static') (OPCIONAL)
-server.use('/static',express.static(path.join(__dirname, '../public')));
+server.use(express.static(path.join(__dirname, '../public')));
 
 // Rotas
 server.use(mainRoutes);
 
 server.use((req, resp) => {
-    resp.status(404).send('Página não encontrada');
+    resp.status(404).render('pages/404');
 })
 
 server.listen(process.env.PORT);
