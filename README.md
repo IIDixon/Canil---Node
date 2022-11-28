@@ -8,5 +8,6 @@ Projeto feito no curso da B7WEB, no módulo de Node + Typescript
 ### Instalação
 
 `npm install`
+
 ### Para rodar o projeto
 `npm run start-dev`
